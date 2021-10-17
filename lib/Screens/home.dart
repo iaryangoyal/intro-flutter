@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(),
       body: Center(
         child: Container(
           child: Text("I am Aryan Goyal"),
         ),
       ),
-    )
+    );
   }
 }
