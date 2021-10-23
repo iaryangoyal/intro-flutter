@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Material(
         child: Center(
             child: Column(
       children: [
@@ -19,6 +19,39 @@ class LoginPage extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 30,
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Enter Username",
+                  labelText: "username",
+                ),
+              ),
+              TextFormField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Enter Password",
+                  labelText: "Password",
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                child: Text("Login"),
+                style: TextButton.styleFrom(),
+                onPressed: () {
+                  print("Hi Champ");
+                },
+              )
+            ],
           ),
         )
       ],
